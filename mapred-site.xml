@@ -6,6 +6,6 @@
 <configuration>
  <property>
  <name>mapred.job.tracker</name>
- <value>acadgild.hadoop.com:54311</value>
+ <value>node01.hadoop.com:54311</value>
  </property>
 </configuration>
