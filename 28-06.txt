@@ -1,0 +1,117 @@
+As root - 
+
+	5  yum install nslookup
+    6  ping ip-172-31-7-242.us-west-1.compute.internal
+    7  ip a
+    8  cd
+    9  clear
+   10  rpm -qa wget
+   11  yum install wget
+   12  wget https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/jdk-8u144-linux-x64.rpm
+   13  clear
+   14  rpm -ivh jdk-8u144-linux-x64.rpm
+   15  java
+   16  javac
+   17  cat ~/.bashrc
+   18  cat /etc/profile
+   19  clear
+   20  vi /etc/profile
+   21  echo $JAVA_HOME
+   22  source /etc/profile
+   23  echo $JAVA_HOME
+   24  echo $PATH
+   25  ssh-keygen
+   26  ip a
+   27  ssh 172.31.7.242
+   28  cd .ssh/
+   29  ll
+   30  cat authorized_keys
+   31  cat id_rsa.pub >> authorized_keys
+   32  cat authorized_keys
+   33  cd
+   34  ssh 172.31.7.242
+   35  exit
+   36  cd
+   37  clear
+   38  wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1.tar.gz
+   39  ll
+   40  mkdir -p /usr/hadoop/namenode /usr/hadoop/datanode /usr/hadoop/tmp
+   41  tar -zxvf hadoop-1.2.1.tar.gz -C /usr/hadoop/
+   42  ll /usr/hadoop/
+   43  cd /usr/hadoop/hadoop-1.2.1/
+   44  pwd
+   45  ll /usr/hadoop/hadoop-1.2.1
+   46  cd con
+   47  cd conf/
+   48  ll
+   49  vi core-site.xml
+   50  vi hdfs-site.xml
+   51  vi hdfs-site.xml
+   52  vi mapred-site.xml
+   53  vi masters
+   54  vi slaves
+   55  vi hadoop-env.sh
+   56  mkdoir /var/log/hadoop
+   57  mkdir /var/log/hadoop
+   58  clear
+   59  cd
+   60  groupadd hadoop
+   61  useradd -g hadoop hdfs
+   62  id hdfs
+   63  cd
+   64  passwd hdfs
+   65  cd
+   66  su hdfs
+   67  chown -R hdfs:hadoop /usr/hadoop /var/log/hadoop
+   68  ll /usr/hadoop
+   69  cd
+   70  vi /etc/profile
+   71  hadoop
+   72  source /etc/profile
+   73  hadoop
+   74  su hdfs
+   75  clear
+   76  history
+
+
+As HDFS - 
+
+ 1  exit
+    2  cd
+    3  ll
+    4  cd .ss
+    5  cd .ssh
+    6  ssh-keygen
+    7  cd .ssh/
+    8  ll
+    9  cat id_rsa.pub > authorized_keys
+   10  cd
+   11  ip a
+   12  ssh 172.31.7.242
+   13  cd .ssh/
+   14  ll
+   15  clear
+   16  cd
+   17  exit
+   18  cd
+   19  hadoop
+   20  java
+   21  clear
+   22  ip a
+   23  ssh 172.31.7.242
+   24  clear
+   25  hadoop namenode -format -force
+   26  vi /usr/hadoop/hadoop-1.2.1/conf/hdfs-site.xml
+   27  hadoop namenode -format -force
+   28  clear
+   29  jps
+   30  cd $HADOOP_HOME
+   31  ll
+   32  ll ./sbin/
+   33  ll ./bin/
+   34  clear
+   35  cd bin/
+   36  ./start-all.sh
+   37  jps
+   38  clear
+   39  history
