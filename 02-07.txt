@@ -1,0 +1,33 @@
+
+ 42  hadoop fs -ls /
+   43  cd
+   44  hadoop fs -ls /
+   45  cler
+   46  clear
+   47  hadoop fs -mkdir /user
+   48  hadoop fs -ls /
+   49  vi hello.txt
+   50  ll
+   51  pwd
+   52  hadoop fs -ls /usr
+   53  hadoop fs -ls /usr/hadoop
+   54  hadoop fs -ls /usr/hadoop/tmp
+   55  hadoop fs
+   58  hadoop fs -copyFromLocal hello.txt /
+   59  ll
+   60  rm hello.txt
+   61  hadoop fs -ls /
+   62  hadoop fs
+   63  hadoop dfs
+   64  hadoop dfs -cat /hello.txt
+   65  hadoop dfs -gett /hello.txt
+   66  hadoop dfs -get /hello.txt
+   67  exit
+   68  cd
+   69  hadoop fs -mkdir /user/balaji
+   70  hadoop fs -ls /user/
+   71  hadoop dfs -chown balaji:developers /user/balaji
+   72  hadoop fs -ls /user/
+   73  hadoop fs -chmod 750 /user/balaji
+   74  ll
+   75  hadoop fs -ls /user/
