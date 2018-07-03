@@ -11,7 +11,7 @@
  </property>
  <property>
   <name>fs.default.name</name>
-  <value>hdfs://node.hadoop.com:54310</value>
+  <value>hdfs://EC2HOSTNAME:54310</value>
 </property>
 <property>
     <name>dfs.permissions</name>
