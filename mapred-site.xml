@@ -6,6 +6,6 @@
 <configuration>
  <property>
  <name>mapred.job.tracker</name>
- <value>node01.hadoop.com:54311</value>
+ <value>EC2HOSTNAME:54311</value>
  </property>
 </configuration>
