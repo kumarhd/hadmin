@@ -18,9 +18,9 @@ echo "export JAVA_HOME=/usr/java/default" >> /usr/hadoop/hadoop-1.2.1/conf/hadoo
 echo "export HADOOP_LOG_DIR=/var/log/hadoop" >> /usr/hadoop/hadoop-1.2.1/conf/hadoop-env.sh
 echo `hostname -f` > /usr/hadoop/hadoop-1.2.1/conf/masters
 echo `hostname -f` > /usr/hadoop/hadoop-1.2.1/conf/slaves
-chown -R hdfs:hadoop /usr/hadoop /var/log/hadoop
 echo "export HADOOP_HOME=/usr/hadoop/hadoop-1.2.1/" >> /etc/profile
 echo "export PATH=\$PATH:\$HADOOP_HOME/bin" >> /etc/profile
 source /etc/profile
 groupadd hadoop
 useradd -g hadoop hdfs
+chown -R hdfs:hadoop /usr/hadoop /var/log/hadoop
