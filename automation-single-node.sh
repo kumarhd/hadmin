@@ -24,3 +24,9 @@ source /etc/profile
 groupadd hadoop
 useradd -g hadoop hdfs
 chown -R hdfs:hadoop /usr/hadoop /var/log/hadoop
+
+#DO THIS MANUALLY
+#cd ~
+#ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
+#cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+#ssh -o "StrictHostKeyChecking no" `hostname` 'date'
