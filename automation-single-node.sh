@@ -14,6 +14,7 @@ sed -i 's/EC2HOSTNAME/'`hostname -f`'/g' core-site.xml
 sed -i 's/EC2HOSTNAME/'`hostname -f`'/g' mapred-site.xml
 cp core-site.xml /usr/hadoop/hadoop-1.2.1/conf/
 cp mapred-site.xml /usr/hadoop/hadoop-1.2.1/conf/
+cp hdfs-site.xml /usr/hadoop/hadoop-1.2.1/conf/
 echo "export JAVA_HOME=/usr/java/default" >> /usr/hadoop/hadoop-1.2.1/conf/hadoop-env.sh
 echo "export HADOOP_LOG_DIR=/var/log/hadoop" >> /usr/hadoop/hadoop-1.2.1/conf/hadoop-env.sh
 echo `hostname -f` > /usr/hadoop/hadoop-1.2.1/conf/masters
